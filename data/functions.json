@@ -1,0 +1,172 @@
+{
+	"sin": {
+		"detail": "sine",
+		"insertText": "sin(${1:angle})",
+		"documentation": "Sine function (in radians)"
+	},
+	"cos": {
+		"detail": "cosine",
+		"insertText": "cos(${1:angle})",
+		"documentation": "Cosine function (in radians)"
+	},
+	"tan": {
+		"detail": "tangent",
+		"insertText": "tan(${1:angle})",
+		"documentation": "Tangent function (in radians)"
+	},
+	"asin": {
+		"detail": "arcsine",
+		"insertText": "asin(${1:angle})",
+		"documentation": "Arcsine function (return radians)"
+	},
+	"acos": {
+		"detail": "arccosine",
+		"insertText": "acos(${1:angle})",
+		"documentation": "Arccosine function (return radians)"
+	},
+	"atan": {
+		"detail": "arctangent",
+		"insertText": "atan(${1:angle})",
+		"documentation": "Arctangent function (return radians)"
+	},
+	"atan2": {
+		"detail": "arctangent2",
+		"insertText": "atan2(${1:y}, ${2:x})",
+		"documentation": "Arctangent function of atan(y/x) (return radians)"
+	},
+	"sinh": {
+		"detail": "sinh",
+		"insertText": "sinh(${1:angle})",
+		"documentation": "Hyperbolic sine function"
+	},
+	"cosh": {
+		"detail": "cosh",
+		"insertText": "cosh(${1:angle})",
+		"documentation": "Hyperbolic cosine function"
+	},
+	"tanh": {
+		"detail": "tanh",
+		"insertText": "tanh(${1:angle})",
+		"documentation": "Hyperbolic tangent function"
+	},
+	"exp": {
+		"detail": "exp",
+		"insertText": "exp(${1:x})",
+		"documentation": "Exponential function"
+	},
+	"loge": {
+		"detail": "loge",
+		"insertText": "loge(${1:x})",
+		"documentation": "Natural logarithm function"
+	},
+	"log10": {
+		"detail": "log10",
+		"insertText": "log10(${1:x})",
+		"documentation": "Base-10 logarithm function"
+	},
+	"log_base": {
+		"detail": "log_base",
+		"insertText": "log_base(${1:x}, ${2:b})",
+		"documentation": "Logarithm of x with base b"
+	},
+	"sqrt": {
+		"detail": "sqrt",
+		"insertText": "sqrt(${1:x})",
+		"documentation": "Square root function"
+	},
+	"abs": {
+		"detail": "abs",
+		"insertText": "abs(${1:x})",
+		"documentation": "Absolute value function"
+	},
+	"floor": {
+		"detail": "floor",
+		"insertText": "floor(${1:x})",
+		"documentation": "Floor function"
+	},
+	"ceil": {
+		"detail": "ceil",
+		"insertText": "ceil(${1:x})",
+		"documentation": "Ceiling function"
+	},
+	"nint": {
+		"detail": "nint",
+		"insertText": "nint(${1:x})",
+		"documentation": "Nearest integer function"
+	},
+	"gauss": {
+		"detail": "Gaussian function",
+		"insertText": "gauss(${1:x}, ${2:x0}, ${3:w})",
+		"documentation": "Calculate a Gaussian profile in variable x centred on x0 with a characteristic width w. f(x) = exp(-((x - x0)/w)^2). In this expression, the full width at half maximum is given by fwhm = 2w * sqrt(ln2)"
+	},
+	"supergauss": {
+		"detail": "Super-Gaussian function",
+		"insertText": "supergauss(${1:x}, ${2:x0}, ${3:w}, ${4:n})",
+		"documentation": "This is identical to 'gauss' except it takes a fourth parameter, n, which is the power to raise the exponential argument to"
+	},
+	"semigauss": {
+		"detail": "Semi-Gaussian function",
+		"insertText": "semigauss(${1:x}, ${2:x0}, ${3:w}, ${4:A0}, ${5:A})",
+		"documentation": "Calculate a semi-Gaussian profile in variable t with maximum amplitude A, amplitude at t = 0 A0, and width w. The parameter A0 is used to calculate t0, the point at which the Gaussian reaches its maximum value. For t less than than t0 the profile is Gaussian, and for t greater than t0 it is the constant A. t0 = w * sqrt(-ln(A0/A))). f(t) = A * exp(-((t - t0)/w)^2) if t < t0 else A"
+	},
+	"if": {
+		"detail": "if function",
+		"insertText": "if(${1:condition}, ${2:true_value}, ${3:false_value})",
+		"documentation": "Same as ternary expression in JavaScript. If the condition is true, the expression evaluates to true_value, otherwise it evaluates to false_value."
+	},
+	"number_density": {
+		"detail": "number density",
+		"insertText": "number_density(${1:species})",
+		"documentation": "Number density of the species"
+	},
+	"temp_x": {
+		"detail": "temp_x",
+		"insertText": "temp_x(${1:species})",
+		"documentation": "Temperature function along x-axis of the species"
+	},
+	"temp_y": {
+		"detail": "temp_y",
+		"insertText": "temp_y(${1:species})",
+		"documentation": "Temperature function along y-axis of the species"
+	},
+	"temp_z": {
+		"detail": "temp_z",
+		"insertText": "temp_z(${1:species})",
+		"documentation": "Temperature function along z-axis of the species"
+	},
+	"ex": {
+		"detail": "ex",
+		"insertText": "exp(${1:x}, ${2:y}, ${3:z})",
+		"documentation": "Electric field along x-axis"
+	},
+	"ey": {
+		"detail": "ey",
+		"insertText": "ey(${1:x}, ${2:y}, ${3:z})",
+		"documentation": "Electric field along y-axis"
+	},
+	"ez": {
+		"detail": "ez",
+		"insertText": "ez(${1:x}, ${2:y}, ${3:z})",
+		"documentation": "Electric field along z-axis"
+	},
+	"bx": {
+		"detail": "bx",
+		"insertText": "bx(${1:x}, ${2:y}, ${3:z})",
+		"documentation": "Magnetic field along x-axis"
+	},
+	"by": {
+		"detail": "by",
+		"insertText": "by(${1:x}, ${2:y}, ${3:z})",
+		"documentation": "Magnetic field along y-axis"
+	},
+	"bz": {
+		"detail": "bz",
+		"insertText": "bz(${1:x}, ${2:y}, ${3:z})",
+		"documentation": "Magnetic field along z-axis"
+	},
+	"critical": {
+		"detail": "critical",
+		"insertText": "critical(${1:omega})",
+		"documentation": "Critical density function, i.e., n_crit(omega) = omega^2 * m0 * epsilon0 / e^2"
+	}
+}

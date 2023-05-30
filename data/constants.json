@@ -1,0 +1,132 @@
+{
+	"pi": {
+		"detail": "The ratio of the circumference of a circle to its diameter",
+		"documentation": "3.1415926..."
+	},
+	"kb": {
+		"detail": "Boltzmann's constant",
+		"documentation": "1.381e-23J/K, 8.617e-5eV/K"
+	},
+	"me": {
+		"detail": "Mass of the electron",
+		"documentation": "9.11e-31kg, 511.0keV/c^2"
+	},
+	"qe": {
+		"detail": "Elementary charge",
+		"documentation": "1.602e-19C, 4.803e-10esu"
+	},
+	"c": {
+		"detail": "Speed of light",
+		"documentation": "2.998e8m/s"
+	},
+	"epsilon0": {
+		"detail": "Permittivity of free space",
+		"documentation": "8.854e-12F/m"
+	},
+	"mu0": {
+		"detail": "Permeability of free space",
+		"documentation": "1.257e-6H/m"
+	},
+	"ev": {
+		"detail": "Electron volt",
+		"documentation": "1.602e-19J"
+	},
+	"kev": {
+		"detail": "Kilo electron volt",
+		"documentation": "1.602e-16J"
+	},
+	"mev": {
+		"detail": "Mega electron volt",
+		"documentation": "1.602e-13J"
+	},
+	"micron": {
+		"detail": "Micron",
+		"documentation": "1e-6m"
+	},
+	"milli": {
+		"detail": "Milli",
+		"documentation": "1e-3"
+	},
+	"micro": {
+		"detail": "Micro",
+		"documentation": "1e-6"
+	},
+	"nano": {
+		"detail": "Nano",
+		"documentation": "1e-9"
+	},
+	"pico": {
+		"detail": "Pico",
+		"documentation": "1e-12"
+	},
+	"femto": {
+		"detail": "Femto",
+		"documentation": "1e-15"
+	},
+	"atto": {
+		"detail": "Atto",
+		"documentation": "1e-18"
+	},
+	"periodic": {
+		"detail": "A simple periodic boundary condition",
+		"documentation": "Fields and/or particles reaching one edge of the domain are wrapped round to the opposite boundary. If either boundary condition is set to periodic then the boundary condition on the matching boundary at the other side of the box is also assumed periodic"
+	},
+	"simple_laser": {
+		"detail": "A characteristic based boundary condition to which one or more EM wave sources can be attached",
+		"documentation": "EM waves impinging on a simple laser boundary are transmitted with as little reflection as possible. Particles are fully transmitted. The field boundary condition works by allowing outflowing characteristics to propagate through the boundary while using the attached lasers to specify the inflowing characteristics. The particles are simply removed from the simulation when they reach the boundary"
+	},
+	"simple_outflow": {
+		"detail": "A simplified version of simple laser which has the same properties of transmitting incident waves and particles, but which cannot have EM wave sources attached to it",
+		"documentation": "These boundaries are about 5% more computationally efficient than simple laser boundaries with no attached sources. This boundary condition again allows outflowing characteristics to flow unchanged, but this time the inflowing characteristics are set to zero. The particles are again simply removed from the simulation when they reach the boundary"
+	},
+	"reflect": {
+		"detail": "This applies reflecting boundary conditions to particles",
+		"documentation": "When specified for fields, all field components are clamped to zero"
+	},
+	"conduct": {
+		"detail": "This applies perfectly conducting boundary conditions to the field",
+		"documentation": "When specified for particles, the particles are reflected"
+	},
+	"open": {
+		"detail": "When applied to fields, EM waves outflowing characteristics propagate through the boundary",
+		"documentation": "Particles are transmitted through the boundary and removed from the system"
+	},
+	"heat_bath": {
+		"detail": "Applies to particles only",
+		"documentation": "See Section 3.3.2"
+	},
+	"cpml_laser": {
+		"detail": "See Section 3.3.1"
+	},
+	"cpml_outflow": {
+		"detail": "See Section 3.3.1"
+	},
+	"thermal": {
+		"detail": "Applies to particles only",
+		"documentation": "See Section 3.3.2"
+	},
+	"never": {
+		"detail": "If the variable is not a required restart variable, it will never be written. If it is a required restart variable, it will be written only at restart dumps."
+	},
+	"full": {
+		"detail": "This variable will be written at full dumps only."
+	},
+	"always": {
+		"detail": "This variable will be written at full, normal, and restart dumps."
+	},
+	"restart": {
+		"detail": "This variable will be written at restart dumps only. Note that variables required for restarting the code are always written to restart dumps. This flag is to enable the writing of additional variables into such dump files."
+	},
+	"species": {
+		"detail": "The derived variable should be output on a species by species basis. It is combined with a dumpmask code by addition."
+	},
+	"no_sum": {
+		"detail": "The output for this derived variable should not be summed over all species. By default, derived variables are summed over all species. If you don't want to include this sum, you must use the 'no sum' flag. It is combined with a dumpmask code by addition."
+	},
+	"average": {
+		"detail": "The output for this variable should be averaged over time. The time span over which the variable will be averaged is controlled using flags described in Section 3.9.2."
+	},
+	"snapshot": {
+		"detail": "By default, the 'average' parameter replaces the variable with an averaged version of the data. Adding this flag specifies that the non-averaged variable should also be dumped to file."
+	}
+}

@@ -1,0 +1,186 @@
+{
+    "control_3d": {
+        "prefix": "control_3d",
+        "body": [
+            "begin:control",
+            "\tnx = ${1:nx}",
+            "\tny = ${2:ny}",
+            "\tnz = ${3:nz}",
+            "\tnparticles = ${4:particles_per_cell} * ${1:nx} * ${2:ny} * ${3:nz}\n",
+            "\tt_end = ${5:t_end}\n",
+            "\tx_min = ${6:x_min}",
+            "\tx_max = ${7:x_max}",
+            "\ty_min = ${8:y_min}",
+            "\ty_max = ${9:y_max}",
+            "\tz_min = ${10:z_min}",
+            "\tz_max = ${11:z_max}",
+            "end:control"
+        ],
+        "description": "Structure of a 3d control block."
+    },
+    "control_2d": {
+        "prefix": "control_2d",
+        "body": [
+            "begin:control",
+            "\tnx = ${1:nx}",
+            "\tny = ${2:ny}",
+            "\tnparticles = ${4:particles_per_cell} * ${1:nx} * ${2:ny}\n",
+            "\tt_end = ${5:t_end}\n",
+            "\tx_min = ${6:x_min}",
+            "\tx_max = ${7:x_max}",
+            "\ty_min = ${8:y_min}",
+            "\ty_max = ${9:y_max}",
+            "end:control"
+        ],
+        "description": "Structure of a 2d control block."
+    },
+    "control_1d": {
+        "prefix": "control_1d",
+        "body": [
+            "begin:control",
+            "\tnx = ${1:nx}",
+            "\tnparticles = ${4:particles_per_cell} * ${1:nx}\n",
+            "\tt_end = ${5:t_end}\n",
+            "\tx_min = ${6:x_min}",
+            "\tx_max = ${7:x_max}",
+            "end:control"
+        ],
+        "description": "Structure of a 1d control block."
+    },
+    "boundaries_3d": {
+        "prefix": "boundaries_3d",
+        "body": [
+            "begin:boundaries",
+            "\tbc_x_min = ${1:simple_laser}",
+            "\tbc_x_max = ${2:simple-outflow}",
+            "\tbc_y_min = ${3:bc_y_min}",
+            "\tbc_y_max = ${4:bc_y_max}",
+            "\tbc_z_min = ${5:bc_z_min}",
+            "\tbc_z_max = ${6:bc_z_max}",
+            "end:boundaries"
+        ],
+        "description": "Structure of a 3d boundary block."
+    },
+    "boundaries_2d": {
+        "prefix": "boundaries_2d",
+        "body": [
+            "begin:boundaries",
+            "\tbc_x_min = ${1:simple_laser}",
+            "\tbc_x_max = ${2:simple-outflow}",
+            "\tbc_y_min = ${3:bc_y_min}",
+            "\tbc_y_max = ${4:bc_y_max}",
+            "end:boundaries"
+        ],
+        "description": "Structure of a 2d boundary block."
+    },
+    "boundaries_1d": {
+        "prefix": "boundaries_1d",
+        "body": [
+            "begin:boundaries",
+            "\tbc_x_min = ${1:simple_laser}",
+            "\tbc_x_max = ${2:simple-outflow}",
+            "end:boundaries"
+        ],
+        "description": "Structure of a 1d boundary block."
+    },
+    "laser": {
+        "prefix": "laser",
+        "body": [
+            "begin:laser",
+            "\tboundary = ${1:x_min}",
+            "\tid = ${2:1}",
+            "\tintensity_w_cm2 = ${3:intensity_w_cm2}",
+            "\tlambda = ${4:lambda}",
+            "\tpol_angle = ${5:pol_angle}",
+            "\tphase = ${6:phase}",
+            "\tprofile = ${7:gauss}(${8:r}, ${9:r0}, ${10:w})",
+            "end:laser"
+        ],
+        "description": "Structure of a laser block."
+    },
+    "constant": {
+        "prefix": "constant",
+        "body": [
+            "begin:constant",
+            "\t${1:var} = ${2:val}",
+            "end:constant"
+        ],
+        "description": "Structure of a constant block."
+    },
+    "output": {
+        "prefix": "output",
+        "body": [
+            "begin:output",
+            "\t${1:var} = ${2:val}",
+            "end:output"
+        ],
+        "description": "Structure of a output block."
+    },
+    "subset": {
+        "prefix": "subset",
+        "body": [
+            "begin:subset",
+            "\t${1:var} = ${2:val}",
+            "end:subset"
+        ],
+        "description": "Structure of a subset block."
+    },
+    "collisions": {
+        "prefix": "collisions",
+        "body": [
+            "begin:collisions",
+            "\t${1:var} = ${2:val}",
+            "end:collisions"
+        ],
+        "description": "Structure of a collisions block."
+    },
+    "species": {
+        "prefix": "species",
+        "body": [
+            "begin:species",
+            "\tname = ${1:species_name}",
+            "\tcharge = ${2:charge}",
+            "\tmass = ${3:mass}",
+            "\tfraction = ${4:fraction}",
+            "end:species"
+        ],
+        "description": "Structure of a species block."
+    },
+    "fields_3d": {
+        "prefix": "fields_3d",
+        "body": [
+            "begin:fields",
+            "\tex = ${1:ex}",
+            "\tey = ${2:ey}",
+            "\tez = ${3:ez}",
+            "\tbx = ${4:bx}",
+            "\tby = ${5:by}",
+            "\tbz = ${6:bz}",
+            "end:fields"
+        ],
+        "description": "Structure of a 3d fields block."
+    },
+    "fields_2d": {
+        "prefix": "fields_2d",
+        "body": [
+            "begin:fields",
+            "\tex = ${1:ex}",
+            "\tey = ${2:ey}",
+            "\tbx = ${4:bx}",
+            "\tby = ${5:by}",
+            "end:fields"
+        ],
+        "description": "Structure of a 2d fields block."
+    },
+    "fields_1d": {
+        "prefix": "fields_1d",
+        "body": [
+            "begin:fields",
+            "\tex = ${1:ex}",
+            "\tbx = ${4:bx}",
+            "end:fields"
+        ],
+        "description": "Structure of a 1d fields block."
+    }
+}
+  

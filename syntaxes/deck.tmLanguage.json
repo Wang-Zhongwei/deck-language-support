@@ -1,0 +1,89 @@
+{
+  "scopeName": "source.deck",
+  "fileTypes": ["deck"],
+  "patterns": [
+    {"include": "#line-comment"},
+    {
+      "begin": "^\\s*(begin)\\s*:\\s*([a-zA-Z]\\w*)\\b",
+      "end": "^\\s*(end)\\s*:\\s*([a-zA-Z]\\w*)\\b",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.begin.deck"
+        },
+        "2": {
+          "name": "constant.language.block-name.deck"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.end.deck"
+        },
+        "2": {
+          "name": "constant.language.block-name.deck"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\b[-+]?(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?\\b",
+          "name": "constant.numeric.deck"
+        },
+        {
+          "match": "\\b(pi|kb|me|qe|c|epsilon0|mu0|ev|kev|mev|atto|femto|pico|nano|micron|milli)\\b",
+          "name": "constant.language.constant.deck"
+        },
+        {
+          "match": "\\b(abs|floor|ceil|nint|sqrt|sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|cosh|exp|loge|log10|og_base|gauss|supergauss|semigauss|interpolate|number_density|temp(erature)?_[xyz](_ev)?|e[xyz]|b[xyz]|critical|if)\\b",
+          "name": "support.function.builtin.deck"
+        },
+        {
+          "match": "\"[^\"]*\"",
+          "name": "string.quote.double.deck"
+        },
+        {
+          "match": "'[^']*'",
+          "name": "string.quote.single.deck"
+        },
+        {
+          "match": "\\b(T|F)\\b",
+          "name": "constant.language.boolean.deck"
+        },
+        {
+          "match": "\\b(and|or|not)\\b",
+          "name": "keyword.operator.logical.deck"
+        },
+        {
+          "match": "\\b(\\+|-|\\*|/|\\^)\\b",
+          "name": "keyword.operator.arithmetic.deck"
+        },
+        {
+          "match": "\\b(lt|gt|eq)\\b",
+          "name": "keyword.operator.comparison.deck"
+        },
+        {
+          "match": "\\b(always|never|full|restart|species|no_sum|average|snapshot|single)\\b",
+          "name": "keyword.other.dump-mark.deck"
+        },
+        {
+          "match": "\\b(periodic|simple_laser|simple_outflow|reflect|conduct|open|heat_bath|cpml_laser|cpml_outflow|thermal)\\b",
+          "name": "keyword.other.boundary-condition.deck"
+        },
+        {
+          "match": "\\b(yee|lehe_[xyz]|pukov|cowan)\\b",
+          "name": "support.class.solver.deck"
+        },
+        {"include": "#line-comment"},
+        {"include": "#variable"}
+      ]
+    }
+  ],
+  "repository": {
+    "line-comment": {
+      "match": "#.*",
+      "name": "comment.line.number-sign.deck"
+    },
+    "variable": {
+      "match": "[a-zA-Z]\\w*",
+      "name": "variable.other.deck"
+    }
+  }
+}
