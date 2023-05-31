@@ -1,13 +1,14 @@
 {
 	"name": "deck-language-support",
-	"description": "Deck Language Support is a Visual Studio Code extension that provides language support for the deck programming language. It provides syntax highlighting, snippets, and language server features for .deck files.",
+	"description": "Deck Language Support is a Visual Studio Code extension that provides language support for the deck programming language. It provides syntax highlighting, snippets, and language server features for .deck files which is the input format for PIC Laser Plasma package.",
 	"author": "Zhongwei Wang",
 	"license": "MIT",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/Wang-Zhongwei/deck-language-support"
 	},
+	"icon": "images/deck-light.png",
 	"publisher": "Zhongwei-Wang",
 	"categories": [],
 	"keywords": [
