@@ -151,7 +151,7 @@ async function validateTextDocument(textDocument) {
     const settings = await getDocumentSettings(textDocument.uri);
     // The validator creates diagnostics for all uppercase words length 2 and more
     const text = textDocument.getText();
-    const pattern = /\b[A-Z]{3,}\b/g;
+    const pattern = /\b[A-Z]{20,}\b/g;
     let m;
     let problems = 0;
     const diagnostics = [];
