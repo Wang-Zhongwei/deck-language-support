@@ -48,4 +48,6 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-.visx
+*.vsix
+
+**/node_modules/

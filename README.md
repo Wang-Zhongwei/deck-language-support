@@ -1,6 +1,6 @@
 # Deck Language Support
 
-![version](https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000)
+![version](https://img.shields.io/badge/version-0.0.5-blue.svg?cacheSeconds=2592000)
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
 Deck Language Support is a Visual Studio Code extension that provides language support for the deck language. It provides syntax highlighting, snippets, and language server features for `.deck` files which is the input format for PIC laser plasma simulation package [EPOCH](https://github.com/Warwick-Plasma/epoch).
