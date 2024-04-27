@@ -49,5 +49,3 @@ po/*~
 rsconnect/
 
 .visx
-
-**/node_modules/
